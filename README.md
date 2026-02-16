@@ -15,7 +15,9 @@ Create a `Dockerfile` so the project can run the test suite in a non-interactive
 
 Requirements:
 
-- The image must run tests by default (example: `CMD ["pytest", "-v"]`).
+- requirements.txt exists and is used during build (pip install -r requirements.txt)
+- pytest must be included/pinned in requirements.txt
+- The image must run tests by default (use: `CMD ["python", "-m", "pytest", "-v"]`).
 - The build must install dependencies from `requirements.txt`.
 
 ### 2) requirements.txt (required)
@@ -48,6 +50,15 @@ Your tasks:
 - Do not refactor unrelated code.
 - Do not introduce extra tooling unless required.
 - You may add tests and the smallest code change needed to fix the bug.
+
+### 5) EXPLANATION.md (required)
+
+Create `EXPLANATION.md` (max 250 words) containing:
+
+- **What was the bug?**
+- **Why did it happen?**
+- **Why does your fix solve it?**
+- **One realistic case / edge case your tests still don’t cover**
 
 ## Submission
 
