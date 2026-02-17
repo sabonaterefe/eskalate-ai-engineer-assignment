@@ -17,7 +17,6 @@ Bug fix: Applied the smallest possible change to make all tests pass.
 Documentation: README updated with usage instructions, and EXPLANATION.md describes the bug and solution.
 
 
-## Running the Tests
 # Run locally
 Install dependencies:
 pip install -r requirements.txt
