@@ -1,65 +1,54 @@
-# AI Experts Assignment (Python)
+AI Experts Assignment (Python)
+This repository contains my completed solution for the AI Experts Assignment.
+The project demonstrates how to set up a reproducible Python environment, identify and fix a bug with minimal changes, and document the process clearly.
 
-This assignment evaluates your ability to:
+Project Overview
+Environment setup: Runs reliably both locally and inside Docker.
 
-- set up a small Python project to run reliably (locally + in Docker),
-- pin dependencies for reproducible installs,
-- write focused tests to reproduce a bug,
-- implement a minimal, reviewable fix.
+Dependencies: All packages are pinned in requirements.txt for reproducibility.
 
-## What you will do
+Testing: Focused tests were written to expose the bug and confirm the fix.
 
-### 1) Dockerfile (required)
+Bug fix: Applied the smallest possible change to make all tests pass.
 
-Create a `Dockerfile` so the project can run the test suite in a non-interactive, CI-style environment.
+Documentation: README updated with usage instructions, and EXPLANATION.md describes the bug and solution.
 
-Requirements:
+Running the Tests
+Run locally
+Install dependencies:
 
-- requirements.txt exists and is used during build (pip install -r requirements.txt)
-- pytest must be included/pinned in requirements.txt
-- The image must run tests by default (use: `CMD ["python", "-m", "pytest", "-v"]`).
-- The build must install dependencies from `requirements.txt`.
+bash
+pip install -r requirements.txt
+Run the test suite:
 
-### 2) requirements.txt (required)
+bash
+python -m pytest -v
+Run in Docker
+Build the image:
 
-Create a `requirements.txt` with pinned versions, using this format:
+bash
+docker build -t ai-experts-assignment .
+Run the tests inside the container:
 
-- `package==x.y.z`
+bash
+docker run --rm ai-experts-assignment
+Bug Fix Summary
+Issue: The client failed to attach the Authorization header when the OAuth2 token was stored as a dictionary.
 
-### 3) README updates (required)
+Fix: Added a condition to refresh when the token is a dict, converting it into a proper OAuth2Token.
 
-Update this README to include:
+Result: All 5 tests now pass, both locally and in Docker.
 
-- how to run the tests locally,
-- how to build and run tests with Docker.
+Details are documented in EXPLANATION.md.
 
-### 4) Find + fix a bug (required)
-
-There is a bug somewhere in this repository.
-
-Your tasks:
-
-- Identify the bug through reading code and/or running tests.
-- Write tests that reproduce the bug (tests should fail on the current code).
-- Apply the smallest possible fix to make the tests pass.
-- Keep the change minimal and reviewable (no refactors).
-
-## Constraints
-
-- Keep changes minimal and reviewable.
-- Do not refactor unrelated code.
-- Do not introduce extra tooling unless required.
-- You may add tests and the smallest code change needed to fix the bug.
-
-### 5) EXPLANATION.md (required)
-
-Create `EXPLANATION.md` (max 250 words) containing:
-
-- **What was the bug?**
-- **Why did it happen?**
-- **Why does your fix solve it?**
-- **One realistic case / edge case your tests still don’t cover**
-
-## Submission
-
-- Submit a public GitHub repository URL containing your solution to the Google form link provided.
+Repository Structure
+Code
+app/                # Application code (http_client, tokens)
+tests/              # Pytest test suite
+Dockerfile          # Container setup
+requirements.txt    # Pinned dependencies
+README.md           # Project instructions
+EXPLANATION.md      # Bug explanation and fix
+Submission
+This repository is public and ready for review.
+All requirements have been met: Dockerfile, requirements.txt, README updates, bug fix with tests, and EXPLANATION.md.
