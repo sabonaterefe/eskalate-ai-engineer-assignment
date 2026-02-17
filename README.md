@@ -18,18 +18,20 @@ Documentation: README updated with usage instructions, and EXPLANATION.md descri
 
 
 # Run locally
+<pre>
 Install dependencies:
 pip install -r requirements.txt
 Run the test suite:
 python -m pytest -v
-
+</pre>
 
 # Run in Docker
+<pre>
 Build the image:
 docker build -t ai-experts-assignment .
 Run the tests inside the container:
 docker run --rm ai-experts-assignment
-
+</pre>
 
 ## Bug Fix Summary
 Issue: The client failed to attach the Authorization header when the OAuth2 token was stored as a dictionary.
