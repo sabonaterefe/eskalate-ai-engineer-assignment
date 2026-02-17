@@ -42,17 +42,17 @@ Details are documented in EXPLANATION.md.
 
 ## Repository Structure
 app/                
-   Application code (http_client, tokens)
+    -Application code (http_client, tokens)
 tests/              
-   Pytest test suite
+   -Pytest test suite
 Dockerfile          
-   Container setup
+   -Container setup
 requirements.txt    
-   Pinned dependencies
+   -Pinned dependencies
 README.md           
-   Project instructions
+   -Project instructions
 EXPLANATION.md      
-   Bug explanation and fix
+   -Bug explanation and fix
 
 
 ## Submission
