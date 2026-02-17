@@ -1,6 +1,6 @@
 ## AI Experts Assignment (Python)
-# This repository contains my completed solution for the AI Experts Assignment.
-# The project demonstrates how to set up a reproducible Python environment, identify and fix a bug with minimal changes, and document the process clearly.
+This repository contains my completed solution for the AI Experts Assignment.
+The project demonstrates how to set up a reproducible Python environment, identify and fix a bug with minimal changes, and document the process clearly.
 
 
 ## Project Overview
@@ -41,13 +41,18 @@ Details are documented in EXPLANATION.md.
 
 
 ## Repository Structure
-Code
-app/                # Application code (http_client, tokens)
-tests/              # Pytest test suite
-Dockerfile          # Container setup
-requirements.txt    # Pinned dependencies
-README.md           # Project instructions
-EXPLANATION.md      # Bug explanation and fix
+app/                
+   Application code (http_client, tokens)
+tests/              
+   Pytest test suite
+Dockerfile          
+   Container setup
+requirements.txt    
+   Pinned dependencies
+README.md           
+   Project instructions
+EXPLANATION.md      
+   Bug explanation and fix
 
 
 ## Submission
