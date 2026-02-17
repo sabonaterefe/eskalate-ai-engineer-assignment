@@ -44,18 +44,12 @@ Details are documented in EXPLANATION.md.
 
 ## Repository Structure
 <pre>
-app                
-    -Application code (http_client, tokens)
-tests              
-   -Pytest test suite
-Dockerfile          
-   -Container setup
-requirements.txt    
-   -Pinned dependencies
-README.md           
-   -Project instructions
-EXPLANATION.md      
-   -Bug explanation and fix
+app/                # Application code (http_client, tokens)
+tests/              # Pytest test suite
+Dockerfile          # Container setup
+requirements.txt    # Pinned dependencies
+README.md           # Project instructions
+EXPLANATION.md      # Bug explanation and fix
 </pre>
 ## Submission
 This repository is public and ready for review.
